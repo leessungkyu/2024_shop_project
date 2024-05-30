@@ -1,6 +1,8 @@
 import "./DetailPage.css"
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import StarScore from "../../components/StarScore/StarScore";
+import { FaStar } from "react-icons/fa";
 
 
 export default function DetailPage(props){
@@ -53,20 +55,39 @@ export default function DetailPage(props){
                         />
                     </div>
                     <div className="detail-button">
-                        <button className="detail-button1">장바구니 담기</button>
-                        <button className="detail-button2">바로구매</button>
+                        <button className="whiteBtn wd200Btn">장바구니 담기</button>
+                        <button className="blueBtn wd200Btn">바로구매</button>
                     </div>
 
                 </div>
             </div>
             <div>
-                <p>제품평가</p>
-                <div>
-                    {scoreArray.map((item, idx)=>{
-
-                    })}
+                <hr/>
+                <div className="productScore">
+                    <p>제품평가</p>
+                    <StarScore />
                 </div>
             </div>
+            <br/>
+            <br/>
+            <div className="productReq">
+                <div className="productReq-top">
+                    <div>
+                        <p>상품문의</p>
+                        <ul>
+                            <li>구매한 상품의 <span className="boldFont">취소/반품은 마이 구매내역에서 신청</span> 가능합니다.</li>
+                            <li>상품문의 및 후기게시판을 통해 취소나 환불, 반품 등은 처리되지 않습니다.</li>
+                            <li><span className="boldFont">가격,판매자,교환/환불 및 배송 등 해당 상품 자체와 관련 없는 문의는 고객센터 내 1:1문의하기</span>를 이용해주세요.</li>
+                            <li><span className="boldFont">"해당 상품 자체"와 관계없는 글,양도,광고성,욕설,비방,도배 등의 글은 예고 없이 이동, 노출제한, 삭제 등의 조치가 취해질 수 있습니다.</span></li>
+                            <li>공개 게시판이믈 전화번호,메일 주소 등 고객님의 소중한 개인정보는 절대 남기지 말아주세요.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button className="whiteBtn wd100Btn">문의하기</button>
+                    </div>
+                </div> 
+                <hr/>
+            </div>   
         </div>
     )
 }
