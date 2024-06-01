@@ -11,13 +11,22 @@
 }
 
 .detail-div-1{
-   width: 50%;
+   /* width: 50%;
+   overflow: hidden; */
+
+   display: 'flex';
+   justify-content: center;
+   align-items: center;
 }
 
 .detail-img {
     width: 450px;
     height: 450px;
     margin: auto;
+}
+.detail-img:hover{
+    /* transform:scale(1.1);
+    transition:all 2s; */
 }
 
 .detail-div-2{

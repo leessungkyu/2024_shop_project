@@ -1,8 +1,9 @@
 import "./DetailPage.css"
-import { useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import StarScore from "../../components/StarScore/StarScore";
-import { FaStar } from "react-icons/fa";
+import CustomImageMagnifier from "../../components/CustomImageMagnifier/CustomImageMagnifier";
+
 
 
 export default function DetailPage(props){
@@ -21,6 +22,7 @@ export default function DetailPage(props){
     
 
 
+    // 수량핸들 
     const handleChage = (event) => {
         let cnt = event.target.value;
         if(cnt < 0){
@@ -38,7 +40,8 @@ export default function DetailPage(props){
         <div className="detail-container">
             <div className="detail-div">  
                 <div className="detail-div-1">
-                    <img src="/img/1.jpg" className="detail-img"/>
+                    <CustomImageMagnifier src={"/img/1.jpg"} zoom={3} />
+                    {/* <img src="/img/1.jpg" className="detail-img"/> */}
                 </div>
                 <div className="detail-div-2">
                     <div className="detail-title">오뚜기 농심 삼양 용기컵라면 12개입 세트(진매+참깨+열+김치면+신라면+육개장+튀김우동+새우탕+삼양라면+불닭볶음+까르보불닭+간짬뽕)세트</div>

@@ -15,7 +15,7 @@ export default function StarScore(props) {
                 }
                 return (
                     <FaStar key={item} 
-                       className={ item <= score ? 'active': 'inactive' }
+                       className={ item <= score ? 'star-active': 'star-inactive' }
                        onClick={()=>{handleOnclick(item)}}
                        size={'30px'}
                     />

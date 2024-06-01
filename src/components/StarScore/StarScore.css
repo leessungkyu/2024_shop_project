@@ -1,7 +1,7 @@
-.active{
+.star-active{
     color: yellow;
 }
-.inactive{
+.star-inactive{
     color: "black";
     background-Color: "transparent";
     border: "1px solid black";
