@@ -1,0 +1,25 @@
+
+.contact_div{
+    width: 80%;
+    margin:auto;
+}
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7d9def;
+}
+
+.contact-container h1 {
+    color: white;
+    padding: 0 30px;
+}
+
+.contact-container button{
+    background-color: none;
+}
+
+.contact1-container{
+    display: flex;
+    justify-content: space-between;
+}

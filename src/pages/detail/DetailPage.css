@@ -1,7 +1,7 @@
 .detail-container{
    width: 80%;
    margin: auto;
-   padding-top:20px;
+   /* padding-top:20px; */
 }
 
 .detail-div{
@@ -17,12 +17,19 @@
    display: 'flex';
    justify-content: center;
    align-items: center;
+   width: 500px;
+   height: 500px;
+   border: 1px solid black;
+
 }
 
 .detail-img {
-    width: 450px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     margin: auto;
+    
+   border: 1px solid black;
 }
 .detail-img:hover{
     /* transform:scale(1.1);
@@ -33,6 +40,8 @@
     width: 45%;
     text-align: left;
     padding-right: 30px;
+    
+   border: 1px solid black;
 }
 .detail-title{
     padding: 30px 0;

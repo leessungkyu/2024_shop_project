@@ -50,11 +50,7 @@ export default function CustomImageMagnifier({src, zoom, cursorwd, cursorhi}){
 								 height: imgRef.current ? `${imgRef.current.height}px` : '300px'
 							}}
 					></div>
-					<div className="img-cursor"
-					   style={{
-							//backgroundPosition: `${position.x}% ${position.y}%`,
-						 }}
-					></div>
+
 					</>
 				) 
 			}
