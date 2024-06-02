@@ -1,8 +1,14 @@
 import "./DetailPage.css"
-import { useCallback, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import StarScore from "../../components/StarScore/StarScore";
 import CustomImageMagnifier from "../../components/CustomImageMagnifier/CustomImageMagnifier";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import PriceInfo from "../../components/PriceInfo/Priceinfo";
+import RadioGroup from "../../components/Radio/RadioGroup";
+import Radio from "../../components/Radio/Radio";
+
 
 
 
@@ -10,7 +16,6 @@ export default function DetailPage(props){
     //url 파라미터 가져오기
     
      let {id} = useParams();
-     console.log({id})
     //  let selecteItem = props.item.find((e)=>{
     //      return e.id == id
     //  });
@@ -32,17 +37,46 @@ export default function DetailPage(props){
         }
     }
 
+    //가격정보 팝업
+    const [priceinfo, setPriceinfo] = useState(false);
+
+    const handleClick = () => {
+        setPriceinfo(!priceinfo);
+    }
+
+    const modalClose = () => {
+        setPriceinfo(false);
+    }
+
+    const [toggle, setToggle] = useState(false);
+    const toggleClick = (e) => {
+        setToggle(!toggle);        
+    }
     return(
+        <>
         <div className="detail-container">
+                                        {
+                            priceinfo && <PriceInfo onclose={modalClose}/> 
+                            }
             <div className="detail-div">  
                 <div className="detail-div-1">
                     <CustomImageMagnifier src={`/img/${id}.jpg`} zoom={3} />
                     {/* <img src="/img/1.jpg" className="detail-img"/> */}
                 </div>
-                <div className="detail-div-2">
+                <div className="detail-div-2">            
+                
                     <div className="detail-title">오뚜기 농심 삼양 용기컵라면 12개입 세트(진매+참깨+열+김치면+신라면+육개장+튀김우동+새우탕+삼양라면+불닭볶음+까르보불닭+간짬뽕)세트</div>
-                    <hr/>
-                    <div className="detail-price">20,000원</div>
+                    <div className="detail-price">
+                        <div className="detail-price-halin">
+                            30% <span className="detail-price-line">54,000원</span> &nbsp; 
+                            <FontAwesomeIcon 
+                                icon    ={faCircleExclamation} 
+                                onClick =    {handleClick}
+                            />
+
+                        </div>
+                        <div>20,000원</div>
+                    </div>
                     <div className="detail-count">
                         <span>수량 : </span>  
                         <input type="number"  
@@ -56,6 +90,23 @@ export default function DetailPage(props){
                     <div className="detail-button">
                         <button className="whiteBtn wd200Btn">장바구니 담기</button>
                         <button className="blueBtn wd200Btn">바로구매</button>
+                    </div>
+                    <div className="detail-div-3">
+                        <div>더 많은 옵션 보기</div>
+                        <div className="detail-delivery">
+                            배송비 포함&nbsp;&nbsp; 
+                            <div className={`toggle-btn-container ${toggle ? "toggle-btn-on": "toggle-btn-off"}`}
+                                  onClick={toggleClick}  
+                            >
+                                <div className="toggle-btn"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <RadioGroup label="배송">
+                            <Radio name="contact" value="1" defaultChecked>1</Radio>
+                            <Radio name="contact" value="2" defaultChecked>2</Radio>
+                        </RadioGroup>
                     </div>
 
                 </div>
@@ -82,11 +133,12 @@ export default function DetailPage(props){
                         </ul>
                     </div>
                     <div>
-                        <button className="whiteBtn wd100Btn">문의하기</button>
+                        <button className="whiteBtn wd100Btn"><Link to={"/contact/inquiry"}>문의하기</Link></button>
                     </div>
                 </div> 
                 <hr/>
             </div>   
         </div>
+        </>
     )
 }

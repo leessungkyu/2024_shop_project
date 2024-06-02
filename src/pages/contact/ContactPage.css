@@ -23,3 +23,17 @@
     display: flex;
     justify-content: space-between;
 }
+
+.contact1-nav{
+    display: flex;
+    gap: 30px;
+}
+
+.contact1-nav a{
+    width: 100px;
+    height: 100%;
+}
+
+.contact1-nav a:hover{
+    text-decoration: underline;
+}

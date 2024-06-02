@@ -12,16 +12,19 @@ code {
     monospace;
 }
 
+
 a {
   text-decoration: none;
-}
-ul{
-  display: flex;
 }
 
 li{
   list-style: none;
   padding: 10px 20px;
+}
+
+.bodywidth{
+  width: 80%;
+  margin: auto;
 }
 
 .wd100Link{
@@ -57,6 +60,12 @@ li{
   text-align: center;
 }
 
+.whiteBtn:hover{
+  cursor: pointer;
+  color: black;
+  border-color: black;
+}
+
 .blueBtn {
   background-color: #346AFF;
   color: white;
@@ -64,6 +73,40 @@ li{
   align-items: center;
   text-align: center;
 }
+
+.blueBtn:hover{
+  cursor: pointer;
+  background-color: blue;
+  border-color: blue;
+}
+
+.toggle-btn-container{
+  width: 70px;
+  height: 30px;
+  background-color: #346AFF;
+  border-radius: 15px;
+  display: flex;
+}
+
+.toggle-btn-on {
+  justify-content: left;
+  transition: justify-content 0.5s;
+}
+
+.toggle-btn-off {
+  justify-content: right;
+  transition: justify-content 0.5s;
+}
+
+.toggle-btn{
+  padding-left: 8px;
+  margin:2px 5px;
+  width:15px;
+  height: 25px;
+  background-color: white;
+  border-radius: 100%;
+}
+
 
 .inputSearch-container{
   display: flex;

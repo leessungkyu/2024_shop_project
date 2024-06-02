@@ -1,11 +1,13 @@
 .detail-container{
    width: 80%;
    margin: auto;
+   padding: 10px 0;
    /* padding-top:20px; */
 }
 
 .detail-div{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     border: 1px solid black;
 }
@@ -17,8 +19,8 @@
    display: 'flex';
    justify-content: center;
    align-items: center;
-   width: 500px;
-   height: 500px;
+   width:  50%;
+   height: 1000px;
    border: 1px solid black;
 
 }
@@ -28,7 +30,6 @@
     height: 100%;
     object-fit: cover;
     margin: auto;
-    
    border: 1px solid black;
 }
 .detail-img:hover{
@@ -37,26 +38,57 @@
 }
 
 .detail-div-2{
-    width: 45%;
+    width: 50%;
     text-align: left;
-    padding-right: 30px;
-    
-   border: 1px solid black;
+    padding: 0 30px;
+    border: 1px solid black;
 }
 .detail-title{
     padding: 30px 0;
     font-weight: bold;
     width: 100%;
+    border-bottom: 1px solid black;
 }
 .detail-price{
     padding: 10px 0;
-    color: red;
-    font-weight: bold;
+    color: black;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.3);
 }
+.detail-price-halin{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.detail-priceinfo{
+    position: absolute;
+    top: 110px;
+    left: 880px;
+    z-index: 5;
+
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.detail-price-line{
+    text-decoration-line: line-through;
+}
+
 .detail-count{
-    font-size: 14px;
+    font-size: 15px;
     padding: 10px 0;
 }
+
+input[type='number']{
+    height: 30px;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	  padding: 10px;
+}
+
 .detail-button{
     padding: 30px 0;
 }
@@ -76,6 +108,15 @@
     justify-content: space-between;
 }
 
+.detail-div-3{
+    display: flex;
+    justify-content: space-between;
+}
+.detail-delivery{
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width:768px) {
     .detail-div{
         display: flex;
@@ -83,14 +124,12 @@
     }
     .detail-div-1{
         width:100%;
-    }
-    .detail-img {
-        width: 300px;
-        height: 300px;
-        margin: auto;
+        height: 500px;
     }
     .detail-div-2{
-        width: 80%;
-        padding-left: 20px;
+        width: 95%;
+        height: 500px;
+        padding: 0;
+        margin: auto;
     }
 }

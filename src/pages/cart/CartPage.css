@@ -1,0 +1,18 @@
+.cart-title{
+	display: flex;
+  justify-content: space-between;
+}
+
+.cart-allow{
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM2IDM3IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMjIuMjIyMiA1LjQwNzUyQzIyLjgyNTUgNC44Mzk4NSAyMy43NzQ4IDQuODY4NzkgMjQuMzQyNSA1LjQ3MjE1QzI0Ljg2NjUgNi4wMjkxMSAyNC44ODIxIDYuODgwODIgMjQuNDA2OSA3LjQ1NTA1TDI0LjI3NzggNy41OTI0OUwxMi42ODg1IDE4LjQ5NTVMMjQuMjc4MiAyOS40MDc5QzI0LjgzNSAyOS45MzIxIDI0LjkwMjIgMzAuNzgxMyAyNC40NjI2IDMxLjM4MzJMMjQuMzQyMSAzMS41MjgyQzIzLjgxNzkgMzIuMDg1IDIyLjk2ODcgMzIuMTUyMiAyMi4zNjY4IDMxLjcxMjZMMjIuMjIxOCAzMS41OTIxTDkuNDcxNzYgMTkuNTg3OEM4Ljg4NzUzIDE5LjAzNzcgOC44NDU5NiAxOC4xMzYxIDkuMzQ2OTEgMTcuNTM2TDkuNDcyMTUgMTcuNDAzMkwyMi4yMjIyIDUuNDA3NTJaIiBmaWxsPSIjMjEyQjM2Ii8+Cjwvc3ZnPg==);
+	width: 36px;
+	height: 36px;
+	background-size: cover;
+	cursor: pointer;
+}
+.cart-name{
+	display: flex;
+	color: var(--rds-color-bluegray-900, #212b36);
+	font-size: 36px;
+	font-weight: 700;
+}

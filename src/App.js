@@ -7,7 +7,8 @@ import LoginPage from './pages/login/LoginPage';
 import DetailPage from './pages/detail/DetailPage';
 import ContactPage from './pages/contact/ContactPage';
 import InquiryPage from './pages/contact/InquiryPage';
-import FaqPage from './pages/contact/Faq';
+import FaqPage from './pages/contact/FaqPage';
+import CartPage from './pages/cart/CartPage';
 
 function App() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function App() {
            <Route path="inquiry" element={<InquiryPage />} />
            <Route path="faq" element={<FaqPage />} />
          </Route>
+         <Route path="/cart" element={<CartPage />} />
       </Routes> 
     </div>
   );

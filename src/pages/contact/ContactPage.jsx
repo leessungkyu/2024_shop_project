@@ -15,9 +15,13 @@ export default function ContactPage(){
                 <Link className="blueBtn wd200Btn"><img src="/img/2.jpg"/>채팅상담하기</Link>
             </div>
             <div className="contact1-container">
-                <div>
-                    <a>문의내역</a>
-                    <a>자주묻는 질문</a>
+                <div className="contact1-nav">
+                    <div>
+                      <Link to={"/contact/inquiry"}>문의내역</Link>
+                    </div>
+                    <div>
+                      <Link to={"/contact/faq"}>자주묻는 질문</Link>
+                    </div>
                 </div>
                 <div>
                     <a>환불안내</a>
